@@ -1,0 +1,56 @@
+.header-navbar .navbar-header .navbar-brand .brand-logo {
+    height: 70px;
+    width: 80px;
+    margin-top: -2px;
+    object-fit: contain;
+}
+li.nav-item.mr-auto.brand-logo-wrapper {
+    width: 100%;
+    text-align: center;
+}
+.header-navbar .navbar-header .navbar-brand .brand-logo {
+    width: 111px;
+}
+.header-navbar .navbar-header .navbar-brand {
+    padding: 0;
+
+}
+body.vertical-layout.vertical-menu-modern.menu-expanded .navbar .navbar-header {
+    float: left;
+    width: 260px;
+    height: 83px !important;
+}
+ul.nav.navbar-nav.flex-row {
+    margin: 9px;
+}
+.main-menu.menu-fixed {
+    padding-top: 23px;
+}
+.menu-hierarchy li {
+    padding: 7px 0;
+    font-size: 15px;
+    border: 1px solid #e3ebf3;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-hierarchy li:nth-child(odd) {
+    background-color: rgba(245,247,250,.5);
+}
+.menu-hierarchy, .menu-hierarchy ul {
+    padding-left: 0 !important;
+    margin-left: 40px;
+    border-left: 1px solid #e5e5e5;
+}
+tags.tagify.form-control {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-bottom: 21px; 
+}
+
+
+.attributes-old .dropify-wrapper {
+    height: 125px;
+}
