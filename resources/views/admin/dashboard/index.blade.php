@@ -42,7 +42,7 @@
                             <div class="media d-flex">
                                 <div class="media-body text-left">
                                     <h3 class="warning mt-0">${{$orderTotalPrice}}</h3>
-                                    <h6 class="mt-0">Net Profit</h6>
+                                    <h6 class="mt-0">Total Income</h6>
                                 </div>
                                 <div>
                                     <i class="la la-pie-chart warning font-large-2 float-right"></i>
@@ -81,8 +81,8 @@
                         <div class="card-body">
                             <div class="media d-flex">
                                 <div class="media-body text-left">
-                                    <h3 class="danger mt-0">99.89 %</h3>
-                                    <h6 class="mt-0">Customer Satisfaction</h6>
+                                    <h3 class="danger mt-0">{{ $totalOrder }}</h3>
+                                    <h6 class="mt-0">Total Orders</h6>
                                 </div>
                                 <div>
                                     <i class="la la-heart danger font-large-2 float-right"></i>
@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <div class="row match-height">
+        {{-- <div class="row match-height">
             <div class="col-xl-8 col-12" id="ecommerceChartView">
                 <div class="card card-shadow">
                     <div class="card-header card-header-transparent py-20">
@@ -185,7 +185,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="row">
             <div id="recent-transactions" class="col-12">
@@ -213,7 +213,6 @@
                                         <th class="border-top-0">Customer Name</th>
                                         <th class="border-top-0">Products</th>
                                         <!--<th class="border-top-0">Categories</th>-->
-                                        <th class="border-top-0">Shipping</th>
                                         <th class="border-top-0">Amount</th>
                                     </tr>
                                 </thead>
@@ -227,10 +226,10 @@
                                             <a href="#">{{$item->invoice_number}}</a>
                                         </td>
                                         <td class="text-truncate">
-                                            <span class="avatar avatar-xs">
+                                            {{-- <span class="avatar avatar-xs">
                                                 <img class="box-shadow-2" src="{{ asset('images/avatar-s-4.png') }}" alt="avatar">
-                                            </span>
-                                            <span>{{$item->delivery_first_name}}</span>
+                                            </span> --}}
+                                            <span>{{$item->delivery_first_name}} {{$item->delivery_last_name}}</span>
                                         </td>
                                         <td class="text-truncate p-1">
                                             <ul class="list-unstyled users-list m-0">
@@ -264,12 +263,7 @@
                                         <!--<td>-->
                                         <!--    <button type="button" class="btn btn-sm btn-outline-danger round">{{$prdCat->category}}</button>-->
                                         <!--</td>-->
-                                        <td>
-                                            <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                                                <div class="progress-bar bg-gradient-x-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td class="text-truncate">$ {{$item->order_total}}</td>
+                                        <td class="text-truncate">${{$item->order_products_subtotal}}</td>
                                     </tr>
                                     @endforeach
                                     <!--<tr>-->
@@ -412,7 +406,7 @@
             </div>
         </div>
 
-        <div class="row match-height">
+        {{-- <div class="row match-height">
             <div class="col-xl-8 col-lg-12">
                 <div class="card">
                     <div class="card-content ">
@@ -469,7 +463,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="row d-none">
             <div class="col-lg-12 col-md-12">

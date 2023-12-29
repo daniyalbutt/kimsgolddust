@@ -57,6 +57,8 @@ class AdminController extends Controller
                     ->groupBy('order_products_product_id')
                     ->get();
         $prdPofit = \DB::table('orders_products')->get();
+		$totalOrder = \DB::table('orders')->count();
+
         $totalPrd = \DB::table('products')->get();
         $user = \DB::table('users')->where('id','!=',1)->get();            
         $orders = DB::table('orders')->get();
@@ -69,7 +71,7 @@ class AdminController extends Controller
             $orderTotalPrice += $item->order_products_price;
         }
         //  dd($orderTotalPrice);
-        return view('admin.dashboard.index')->with(compact('orderTotal'))->with(compact('orderTotalPrice'))->with(compact('user'))->with(compact('orders'))->with(compact('totalPrd'));
+        return view('admin.dashboard.index')->with(compact('orderTotal'))->with(compact('orderTotalPrice'))->with(compact('user'))->with(compact('orders'))->with(compact('totalPrd'))->with(compact('totalOrder'));
     } 
 	
 
